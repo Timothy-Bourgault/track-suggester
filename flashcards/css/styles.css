@@ -1,0 +1,24 @@
+body{
+	text-align: center;
+	background: #ff8080;
+}
+.term{
+	font-size: 1.4em;
+	text-transform: uppercase;
+}
+.definition, .term {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.show{
+	display: block;
+	overflow: hidden;
+}
+.hide{
+	display: none;
+}
+.row > div {
+	min-height: 200px;
+	border: 1px solid black;
+	background: url("../img/notecard.jpg");
+}
