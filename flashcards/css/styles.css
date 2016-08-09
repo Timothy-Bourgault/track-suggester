@@ -1,14 +1,15 @@
 body{
 	text-align: center;
-	background: #ff8080;
+	background: url("../img/background.jpg")center center fixed;
+	background-size: cover;
 }
 .term{
 	font-size: 1.4em;
 	text-transform: uppercase;
+	padding-top: 93px;
 }
-.definition, .term {
-	margin-top: auto;
-	margin-bottom: auto;
+.definition{
+	margin-top: 30px;
 }
 .show{
 	display: block;
@@ -18,7 +19,19 @@ body{
 	display: none;
 }
 .row > div {
-	min-height: 200px;
-	border: 1px solid black;
+	min-height: 260px;
+	/*border: 1px solid black;*/
 	background: url("../img/notecard.jpg");
+	margin: 17px;
+	border: solid 4px rgba(0, 0, 0, 0.3);
+}
+h1, h2{
+	font-family: 'Shrikhand';
+	color: white;
+}
+.jumbotron{
+	background: #c5d5cb;
+}
+p{
+	font-family: 'Slabo 27px', serif;
 }
