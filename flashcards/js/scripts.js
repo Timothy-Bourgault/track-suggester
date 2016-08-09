@@ -11,6 +11,6 @@ $(function(){
     $(this).removeClass("show");
     $(this).siblings().removeClass("hide");
     $(this).siblings().addClass("show");
-  })
+  });
 
 });
