@@ -3,70 +3,84 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jquery-3.1.0.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Epicodus Track Selector</title>
+    <title><img href="img/epicodus-ico.png">Track Suggester</title>
     <meta charset="utf-8">
-    <title>Epicodus Track Selector</title>
   </head>
   <body>
-    <div class="container">
-      <div class="navbar navbar-light  navbar-fixed-top" style="background-color: #e3f2fd;">
-        <div class="container">
-          <button type="button" class="navbar-toggle"   data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand deluxe text-muted" href="#">Epicodus Track Selector</a>
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Help!</a></li>
-            </ul>
-          </div>
+
+<!--Navbar and Jumbotron-->
+
+    <div class="navbar navbar-light  navbar-fixed-top" style="background-color: #e3f2fd;">
+      <div class="container">
+        <button type="button" class="navbar-toggle"   data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand deluxe text-muted" rel="#" href="img/epicodus.ico.png">Epicodus Track Selector
+        </a>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help!</a></li>
+          </ul>
         </div>
       </div>
-      <div class="jumbotron">
-        <h1 class="deluxe">Epicodus Track Selector</h1>
-        <p class="lead">Find out which track best coincides with your personal goals!</p>
-        <p class="btn-group">
-          <a class="btn btn-primary btn-md" href="#">Take our Track Selector Survey!</a>
-          <a class="btn btn-info bt-md" href="#">Read this helpful informational blog to help make your decision...</a>
-        </p>
-      </div>
+    </div>
+    <div class="jumbotron">
+      <h1 class="deluxe">Epicodus Track Selector</h1>
+      <p class="lead">Find out which track best coincides with your personal goals!</p>
+      <p class="btn-group">
+        <a class="btn btn-primary btn-md" id="showForm" href="#">Take our Track Selector Survey!</a>
+        <a class="btn btn-info bt-md" href="http://www.epicodus.com/blog/what-programming-language-should-i-learn">Read this helpful informational blog to help make your decision...</a>
+      </p>
+    </div>
+
+    <br />
+    <div class="survey">
       <h4>Just answer this short survey to get our calculated suggestion:</h4>
 
+<!--Form Begins-->
+
+      <br />
       <form id="aboutYou">
         <div class="form-group">
           <label for="yourName">What's your name?</label>
           <input id="yourName" class="form-control" type="text" placeholder="Please enter you name here..." required>
         </div>
+
+        <br />
         <h5>Do you prefer front end development and UX Design, or are you more of a backend person who likes to pull strings behind the scenes and really work on he functionallity of a webpage?</h5>
         <select class="form-control" id="myFrontBack">
           <option value="0">Front End Development</option>
           <option value="1">Back End Development</option>
         </select>
+
+        <br />
         <h5>If you could choose one of these questions to describe your process when programming: </h5>
         <div class="radio">
           <label>
             <input type="radio" name="myDescriber" value="utility" checked>
-          Does it even work yet?
+          Does the page even work yet?
           </label>
         </div>
         <div class="radio">
           <label>
-            <input type="radio" name="my#" value="#">
-          What is the greatest balance between form and function here?
+            <input type="radio" name="myDescriber" value="balance">
+          What is the greatest balance between form and function I can achieve here?
           </label>
         </div>
         <div class="radio">
           <label>
-            <input type="radio" name="my#" value="#">
-          Who is gonna see this?
+            <input type="radio" name="myDescriber" value="asthetic">
+          Who is gonna see this website and how will it make them feel?
           </label>
         </div>
+
+        <br />
         <h5>What kind of envoironment do you prefer to work in?</h5>
         <select class="form-control" id="myEnvironment">
           <option value="0">Home</option>
@@ -74,6 +88,8 @@
           <option value="2">Open Flow Office</option>
           <option value="3">Beach</option>
         </select>
+
+        <br />
         <h5>Where do your strengths lie?</h5>
         <select class="form-control" id="mystrengths">
           <option value="0">cooking</option>
@@ -82,7 +98,14 @@
           <option value="3">Art</option>
         </select>
 
+        <br />
         <h5>How do you feel about working for a giant corporation to which you are merely a number?</h5>
+        <div class="radio">
+          <label>
+            <input type="radio" name="mySelfWorth" value="Blunts" checked>
+          Pass the blunt yo!
+          </label>
+        </div>
         <div class="radio">
           <label>
             <input type="radio" name="mySelfWorth" value="Microchip" checked>
@@ -105,6 +128,9 @@
         <br />
         <button type="submit" class="btn btn-danger"> Submit Form!</button>
       </form>
+
+<!--Survey Return Section-->
+
       <div class="result" id="c#Track">
         <h2>PHP/Drupal</h2>
         <div class="row">
@@ -116,6 +142,7 @@
           </div>
         </div>
       </div>
+
       <div class="result" id="c#Track">
         <h2>C#/.NET</h2>
         <div class="row">
@@ -139,6 +166,7 @@
           </div>
         </div>
       </div>
+
       <div class="result" id="designTrack">
         <h2>Sounds like you are a Designer!</h2>
         <div class="row">
@@ -150,6 +178,7 @@
           </div>
         </div>
       </div>
+
       <div class="result" id="javaTrack">
         <h2>You may be highly interested in what our Java/Android track has to offer!</h2>
         <div class="row">
@@ -157,17 +186,19 @@
             <img src="img/android.jpeg" alt="#">
           </div>
           <div class="col-xs-9">
-            <p>#</p>
+            <p>Quinoa shoreditch salvia tofu man bun, four loko umami celiac yuccie trust fund chambray flexitarian bushwick seitan plaid. Four loko pork belly bicycle rights sartorial whatever poutine. Yr disrupt quinoa freegan poutine. Bicycle rights echo park kitsch ennui man bun, fashion axe whatever microdosing. Sustainable mlkshk stumptown, man braid williamsburg tousled pabst pickled yr everyday carry flexitarian jean shorts. Man bun salvia paleo intelligentsia biodiesel. Schlitz everyday carry freegan, semiotics kombucha helvetica stumptown chia.</p>
           </div>
         </div>
-        <div class="result" id="noGo">
-          <h2>You should not be taking courses at Epicodus :(</h2>
-          <div class="row">
-            <div class="col-xs-3">
-              <img src="img/kicked-out.png" alt="#">
-            </div>
-            <div class="col-xs-9">
-              <p>#</p>
+      </div>
+
+      <div class="result" id="noGo">
+        <h2>You should not be taking courses at Epicodus :(</h2>
+        <div class="row">
+          <div class="col-xs-3">
+            <img src="img/kicked-out.png" alt="#">
+          </div>
+          <div class="col-xs-9">
+            <p>Quinoa shoreditch salvia tofu man bun, four loko umami celiac yuccie trust fund chambray flexitarian bushwick seitan plaid. Four loko pork belly bicycle rights sartorial whatever poutine. Yr disrupt quinoa freegan poutine. Bicycle rights echo park kitsch ennui man bun, fashion axe whatever microdosing. Sustainable mlkshk stumptown, man braid williamsburg tousled pabst pickled yr everyday carry flexitarian jean shorts. Man bun salvia paleo intelligentsia biodiesel. Schlitz everyday carry freegan, semiotics kombucha helvetica stumptown chia.</p>
           </div>
         </div>
       </div>

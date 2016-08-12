@@ -6,30 +6,34 @@ $(document).ready(function() {
 
     $(".result").hide();
 
+    var yrName = $("#yourName").val();
+    var yrFrontBack = parseInt($("#myFrontBack").val());
+    var yrEnvironment = parseInt($("#myEnvironment").val());
+    var yrStrengths = parseInt($("#myStrengths").val());
+    var yrSelfWorth = $("input:radio[name=mySelfWorth]:checked").val();
+    var yrDescriber = $("input:radio[name=myDescriber]:checked").val();
 
-    //var yrName = $("#yourName").val();
-    //var yrTentacles = parseInt($("#myTentacles").val());
-    //var yrElement = parseInt($("#myElement").val());
-    //var yrVaca = $("input:radio[name=myVacation]:checked").val();
-    //var yrSauce = $("input:radio[name=mySauce]:checked").val();
-    //var yrDomSub = parseInt($("#myDomSub").val());
+    if (yrFrontBack === 0) {
+      $("#designTrack").show();
+    }
 
-    //if (yrDomSub === 1) {
-      //$("#elderGod4").show();
-    //}
-    //else if (yrTentacles >= 2 && yrSauce === "Boolean Slime") {
-      //$("#elderGod1").show();
-    //}
-    //else if ((yrElement === "Fire" || yrElement === "Air") && yrVaca === "Nameless City") {
-      //$("#elderGod2").show();
-    //}
-    //else if (yrTentacles < 2 || yrElement === "Water" || yrVaca === "Rlyeh" || yrDomSub === 0) {
-      //$("#elderGod3").show();
-    //}
-    //else {
-      //$("#elderGod4").show();
-    //}
-  //});
+    else if (yrFrontBack == 1 && yrEnvironment == 2 && yrDescriber === "balance") {
+      $("#javaTrack").show();
+    }
 
+    else if (yrFrontBack == 1 && yrEnvironment == 0 && yrStrengths == 0 && yrSelfWorth === "Blunts") {
+      $("#noGo").show();
+    }
+
+  });
 
 });
+
+  //$("#elderGod2").show();
+
+//else if (yrTentacles < 2 || yrElement === "Water" || yrVaca === "Rlyeh" || yrDomSub === 0) {
+  //$("#elderGod3").show();
+//}
+//else {
+  //$("#elderGod4").show();
+//}
