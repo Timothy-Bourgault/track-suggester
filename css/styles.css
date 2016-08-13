@@ -4,6 +4,8 @@
 .result img {
   width: 100%;
 }
-/*.survey {
-  display: none;
+.survey {
+  margin-left: 1em;
+  margin-right: 1em;
 }
+  /*display: none;

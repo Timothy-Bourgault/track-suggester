@@ -17,6 +17,10 @@ $(document).ready(function() {
       $("#designTrack").show();
     }
 
+    else if (yrFrontBack == 1 && yrEnvironment == 1) {
+      $("#c-sharpTrack").show();
+    }
+
     else if (yrFrontBack == 1 && yrEnvironment == 2 && yrDescriber === "balance") {
       $("#javaTrack").show();
     }
@@ -25,15 +29,12 @@ $(document).ready(function() {
       $("#noGo").show();
     }
 
+    else if (yrFrontBack == 1 && yrElement === "Water" || yrEnvironment === "Beach") {
+      $("#rubyTrack").show();
+    }
+    else if (yrFrontBack == 1 && yrElement === "Water" || yrEnvironment === "Beach") {
+      $("#phpTrack").show();
+    }
   });
 
 });
-
-  //$("#elderGod2").show();
-
-//else if (yrTentacles < 2 || yrElement === "Water" || yrVaca === "Rlyeh" || yrDomSub === 0) {
-  //$("#elderGod3").show();
-//}
-//else {
-  //$("#elderGod4").show();
-//}
