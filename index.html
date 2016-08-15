@@ -23,9 +23,9 @@
         </a>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Help!</a></li>
+            <li class="active"><a href="http://www.epicodus.com/">Home</a></li>
+            <li><a href="README.md">About</a></li>
+            <li><a href="help.html">Help!</a></li>
           </ul>
         </div>
       </div>
@@ -40,101 +40,118 @@
             <h1 class="deluxe">Track Suggester</h1>
             <p class="lead">Find out which track best coincides with your personal goals!</p>
             <p class="btn-group-vertical">
-              <a class="btn btn-primary btn-md" id="showForm" href="#">Take our Track Selector Survey!</a>
+              <a class="btn btn-primary btn-md" href="#textModal" data-toggle="modal" id="work form-group">Take our Track Suggester Survey!</a>
               <a class="btn btn-info bt-md" href="http://www.epicodus.com/blog/what-programming-language-should-i-learn">Read this helpful informational blog to help make your decision...</a>
             </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="survey">
-      <h4>Just answer this short survey to get our calculated suggestion:</h4>
+    <div class="modal fade" id="textModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            <h4>Just answer this short survey to get our calculated suggestion:</h4>
+          </div>
+          <div class="modal-body">
+            <br />
+            <form>
+              <div class="show-onclick">
+                <label for="yourName">What's your name?</label>
+                <input id="yourName" class="form-control" type="text" placeholder="Please enter you name here..." required>
+              </div>
+              <br />
+              <div class="show-onclick form-group">
+                <h5>Do you prefer front end development and UX/UI Design, or are you more of a backend person who likes to pull strings behind the scenes, and really work on he functionallity of a webpage?</h5>
+                <select class="form-control" id="myFrontBack">
+                  <option value="0">Front End Development</option>
+                  <option value="1">Back End Development</option>
+                </select>
+              </div>
+              <br />
+              <div class="show-onclick form-group">
+                <h5>If you could choose one of these questions to describe your process when programming: </h5>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="myDescriber" value="utility" checked>
+                  Does the page even work yet?
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="myDescriber" value="balance">
+                  What is the greatest balance between form and function I can achieve here?
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="myDescriber" value="asthetic">
+                  Who is gonna see this website and how will it make them feel?
+                  </label>
+                </div>
+              </div>
+              <br />
+              <div class="show-onclick form-group">
+                <h5>What kind of envoironment do you prefer to work in?</h5>
+                <select class="form-control" id="myEnvironment">
+                  <option value="0">Home</option>
+                  <option value="1">Cubicle</option>
+                  <option value="2">Open Flow Office</option>
+                  <option value="3">Beach</option>
+                </select>
+              </div>
+              <br />
+              <div class="show-onclick form-group">
+                <h5>Where do your strengths lie?</h5>
+                <select class="form-control" id="mystrengths">
+                  <option value="0">cooking</option>
+                  <option value="1">Mathematics</option>
+                  <option value="2">Science</option>
+                  <option value="3">Art</option>
+                </select>
+              </div>
+              <br />
+              <div class="show-onclick form-group">
+                <h5>How do you feel about working for a giant corporation to which you are merely a number?</h5>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="mySelfWorth" value="Blunts" checked>
+                  Pass the blunt yo!
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="mySelfWorth" value="Microchip" checked>
+                  Tell me where to fall in line! Here is the routing number to my bank account to set up direct deposit.  Please microchip me!
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="mySelfWorth" value="Matrix">
+                  I'm not too enthused by the idea of plugging back into the Matrix, but I am willing to play along with your little game for just a little while...
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="mySelfWorth" value="Travel">
+                  I'd rather travel the world, work at my own pace, make my own schedule, and live the way I want to ;)
+                  </label>
+                </div>
+              </div>
+              <br />
+              <div class="show-onclick form-group">
+                <button type="submit" class="btn btn-danger"> Submit Form!</button>
+              </div>
+            </form>
 
-<!--Form Begins-->
+          </div>
 
-      <br />
-      <form id="aboutYou">
-        <div class="form-group">
-          <label for="yourName">What's your name?</label>
-          <input id="yourName" class="form-control" type="text" placeholder="Please enter you name here..." required>
         </div>
 
-        <br />
-        <h5>Do you prefer front end development and UX Design, or are you more of a backend person who likes to pull strings behind the scenes and really work on he functionallity of a webpage?</h5>
-        <select class="form-control" id="myFrontBack">
-          <option value="0">Front End Development</option>
-          <option value="1">Back End Development</option>
-        </select>
+      </div>
 
-        <br />
-        <h5>If you could choose one of these questions to describe your process when programming: </h5>
-        <div class="radio">
-          <label>
-            <input type="radio" name="myDescriber" value="utility" checked>
-          Does the page even work yet?
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="myDescriber" value="balance">
-          What is the greatest balance between form and function I can achieve here?
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="myDescriber" value="asthetic">
-          Who is gonna see this website and how will it make them feel?
-          </label>
-        </div>
 
-        <br />
-        <h5>What kind of envoironment do you prefer to work in?</h5>
-        <select class="form-control" id="myEnvironment">
-          <option value="0">Home</option>
-          <option value="1">Cubicle</option>
-          <option value="2">Open Flow Office</option>
-          <option value="3">Beach</option>
-        </select>
-
-        <br />
-        <h5>Where do your strengths lie?</h5>
-        <select class="form-control" id="mystrengths">
-          <option value="0">cooking</option>
-          <option value="1">Mathematics</option>
-          <option value="2">Science</option>
-          <option value="3">Art</option>
-        </select>
-
-        <br />
-        <h5>How do you feel about working for a giant corporation to which you are merely a number?</h5>
-        <div class="radio">
-          <label>
-            <input type="radio" name="mySelfWorth" value="Blunts" checked>
-          Pass the blunt yo!
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="mySelfWorth" value="Microchip" checked>
-          Tell me where to fall in line! Here is the routing number to my bank account to set up direct deposit.  Please microchip me!
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="mySelfWorth" value="Matrix">
-          I'm not too enthused by the idea of plugging back into the Matrix, but I am willing to play along with your little game for just a little while...
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="mySelfWorth" value="Travel">
-          I'd rather travel the world, work at my own pace, make my own schedule, and live the way I want to ;)
-          </label>
-        </div>
-
-        <br />
-        <button type="submit" class="btn btn-danger"> Submit Form!</button>
-      </form>
 
 <!--Survey Return Section-->
 

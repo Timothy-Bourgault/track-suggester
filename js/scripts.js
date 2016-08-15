@@ -1,8 +1,10 @@
 $(document).ready(function() {
+  $("#work").click(function() {
+    $('.show-onclick').show();
 
-  $("form#aboutYou").submit(function(event) {
-
-    event.preventDefault();
+    $("form#aboutYou").submit(function(event) {
+      event.preventDefault();
+    })
 
     $(".result").hide();
 
