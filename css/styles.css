@@ -4,9 +4,15 @@
   margin-right: 4em;
 
 }
+
+h4 {
+  margin-left: 3em;
+}
+
 .result {
   display: none;
 }
+
 .result img {
   width: 100%;
 }

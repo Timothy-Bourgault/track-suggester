@@ -1,10 +1,6 @@
 $(document).ready(function() {
-//debugger;
-  $("#work").click(function(event) {
-    $('.show-onclick').show();
-    $("#aboutYou").submit(function(event) {
-      event.preventDefault();
-      $(".result").hide();
+
+  $("form").submit(function(event) {
 
       var yrName = $("#yourName").val();
       var yrFrontBack = parseInt($("#myFrontBack").val());
@@ -17,25 +13,17 @@ $(document).ready(function() {
         $("#designTrack").show();
       }
 
-      else if (yrFrontBack == 1 && yrEnvironment == 1) {
-        $("#c-sharpTrack").show();
+      else if (yrFrontBack === 1 && yrEnvironment == 1) {
+        $("#cSharpTrack").show();
       }
 
-      else if (yrFrontBack == 1 && yrEnvironment == 2 && yrDescriber === "balance") {
+      else if (yrFrontBack === 1 && yrEnvironment == 2) {
         $("#javaTrack").show();
       }
 
-      else if (yrFrontBack == 1 && yrEnvironment == 0 && yrStrengths == 0 && yrSelfWorth === "Blunts") {
+      else if (yrFrontBack === 1 && yrStrengths == 0 || yrSelfWorth === "Blunts") {
         $("#noGo").show();
       }
-
-      else if (yrFrontBack == 1 && yrElement === "Water" || yrEnvironment === "Beach") {
-        $("#rubyTrack").show();
-      }
-      else if (yrFrontBack == 1 && yrElement === "Water" || yrEnvironment === "Beach") {
-        $("#phpTrack").show();
-      }
-
-    });
+      event.preventDefault();
   });
 });
